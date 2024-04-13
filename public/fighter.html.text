@@ -1,8 +1,8 @@
 <div class="fighter">
   <img
-    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfdb7d48-342a-4f44-8f2d-ca5203070d57/dce8cej-991bdf14-2562-43f5-a907-31827ce01cde.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmZGI3ZDQ4LTM0MmEtNGY0NC04ZjJkLWNhNTIwMzA3MGQ1N1wvZGNlOGNlai05OTFiZGYxNC0yNTYyLTQzZjUtYTkwNy0zMTgyN2NlMDFjZGUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.IAkJVDBNHeZjPGt2BF9YSv1tANpA-k7Tfv9rwmhXalE"
+    src="${image}"
   />
-  <span class="title">Picachu</span>
+  <span class="title">${name}</span>
   <div class="actions">
     <a style="color: red" class="remove_action"
       ><i class="fa-solid fa-trash"></i
@@ -12,17 +12,17 @@
     ></a>
   </div>
   <p>
-    Pikachu, also known as Pika (ピカチュウ), hails from the Pokémon universe.
-    It made its debut in the series’ first generation and has become an iconic
-    character across various media.
+    ${description}
   </p>
   <ul class="stats">
-    <li><span class="label">Fighter Number:</span> 8</li>
-    <li><span class="label">Unlock Order:</span> Default</li>
-    <li><span class="label">Number of Jumps:</span> 2</li>
-    <li><span class="label">Weight:</span> 79 Units (Lightweight)</li>
-    <li><span class="label">Dash Speed:</span> 2.039 (Fast)</li>
-    <li><span class="label">Air Speed:</span> 0.957 (Quick)</li>
-    <li><span class="label">Fast Fall Speed:</span> 2.48 (Speedy)</li>
+    <li><span class="label">Fighter Number:</span> ${fighter_number}</li>
+    <li><span class="label">Unlock Order:</span> ${unlock_order}</li>
+    <li><span class="label">Number of Jumps:</span> ${number_of_jumps}</li>
+    <li><span class="label">Weight:</span> ${weight} Units (Lightweight)</li>
+    <li><span class="label">Dash Speed:</span> ${dash_speed} (Fast)</li>
+    <li><span class="label">Air Speed:</span> ${air_speed} (Quick)</li>
+    <li>
+      <span class="label">Fast Fall Speed:</span> ${fast_fall_speed} (Speedy)
+    </li>
   </ul>
 </div>
