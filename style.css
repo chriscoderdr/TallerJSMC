@@ -29,6 +29,21 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+dialog {
+  width:80%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+form input {
+  padding: 8px;
+  align-self: stretch;
+}
 
 h1 {
   font-size: 3.2em;
