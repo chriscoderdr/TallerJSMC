@@ -1,30 +1,41 @@
 import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import { setupCounter } from "./counter.js";
 
 const addDialog = document.getElementById("addDialog");
 
-document.getElementById("addButton").addEventListener("click", () => {
-  addDialog.showModal();
-});
+// const removeConfirmationDialog = document.getElementById(
+//   "removeConfirmationDialog"
+// );
 
-// document.querySelector('#app').innerHTML = `
-//   <div>
-//     <a href="https://vitejs.dev" target="_blank">
-//       <img src="${viteLogo}" class="logo" alt="Vite logo" />
-//     </a>
-//     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-//       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-//     </a>
-//     <h1>Hello Vite!</h1>
-//     <div class="card">
-//       <button id="counter" type="button"></button>
-//     </div>
-//     <p class="read-the-docs">
-//       Click on the Vite logo to learn more
-//     </p>
-//   </div>
-// `
+// document.querySelector(".remove_action").addEventListener("click", (el) => {
+//   removeConfirmationDialog.showModal();
+// });
 
-// setupCounter(document.querySelector('#counter'))
+// document.querySelector(".edit_action").addEventListener("click", () => {
+//   addDialog.showModal();
+// });
+
+// document.getElementById("addButton").addEventListener("click", () => {
+//   addDialog.showModal();
+// });
+
+const fightersContainer = document.getElementById("fighters_container");
+
+const fetchFighterTemplate = async () => {
+  const response = await fetch('fighter.html.text');
+  const html = await response.text();
+  return html
+}
+
+
+const fighter = await fetchFighterTemplate();
+
+fightersContainer.innerHTML += fighter;
+
+const fighters = [
+  {
+    name: "Picachu",
+    description:
+      "Pikachu, also known as Pika (ピカチュウ), hails from the Pokémon universe. It made its debut in the series’ first generation and has become an iconic character across various media.",
+    stats: [],
+  },
+];
