@@ -109,6 +109,14 @@ body,
   flex-wrap: wrap;
 }
 
+.fighter .actions {
+  display: inline;
+}
+
+.fighter .actions:hover {
+  cursor: pointer;
+}
+
 .fighter {
   border: 1px solid black;
   padding: 16px;

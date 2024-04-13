@@ -8,14 +8,81 @@
   </head>
   <body>
     <!-- <div id="app"></div> -->
+    <dialog open>
+      <p>Add a fighter!</p>
+      <form method="dialog">
+        <div><input type="text" name="Image" placeholder="Image" /></div>
+        <div><input type="text" name="Name" placeholder="Name" /></div>
+        <div>
+          <input type="text" name="Description" placeholder="Description" />
+        </div>
+        <div>
+          <span>Stats</span>
+          <div>
+            <input
+              type="text"
+              name="fighter_number"
+              placeholder="Fighter Number"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="fighter_unlock_order"
+              placeholder="Fighter Unlock Order"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="fighter_number_jumps"
+              placeholder="Fighter Number of Jumps"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="fighter_weight"
+              placeholder="Fighter Weight"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="fighter_dash_speed"
+              placeholder="Fighter Dash Speed"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="fighter_air_speed"
+              placeholder="Fighter Air Speed"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="fighter_fast_fall_speed"
+              placeholder="Fighter Fast Fall Speed"
+            />
+          </div>
+        </div>
+        <button>Add</button>
+      </form>
+    </dialog>
     <div class="main_container">
-      <input type="button" value="Add" />
+      <button type="reset"><i class="fa-solid fa-plus"></i> Add</button>
       <div class="container">
         <div class="fighter">
           <img
             src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bfdb7d48-342a-4f44-8f2d-ca5203070d57/dce8cej-991bdf14-2562-43f5-a907-31827ce01cde.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2JmZGI3ZDQ4LTM0MmEtNGY0NC04ZjJkLWNhNTIwMzA3MGQ1N1wvZGNlOGNlai05OTFiZGYxNC0yNTYyLTQzZjUtYTkwNy0zMTgyN2NlMDFjZGUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.IAkJVDBNHeZjPGt2BF9YSv1tANpA-k7Tfv9rwmhXalE"
           />
           <span class="title">Picachu</span>
+          <div class="actions">
+            <a style="color: red"><i class="fa-solid fa-trash"></i></a>
+            <a style="color: blue"><i class="fa-solid fa-pen-to-square"></i></a>
+          </div>
           <p>
             Pikachu, also known as Pika (ピカチュウ), hails from the Pokémon
             universe. It made its debut in the series’ first generation and has
@@ -91,5 +158,9 @@
       </div>
     </div>
     <script type="module" src="/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8815e98bc7.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
