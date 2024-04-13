@@ -7,11 +7,14 @@ const setup = () => {
     "removeConfirmationDialog"
   );
 
-  document.querySelector(".remove_action").addEventListener("click", (el) => {
-    removeConfirmationDialog.showModal();
+  document.querySelectorAll(".remove_action").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      console.log(event.target.closest('.fighter').remove());
+      // removeConfirmationDialog.showModal();
+    });
   });
 
-  document.querySelector(".edit_action").addEventListener("click", () => {
+  document.querySelectorAll(".edit_action").addEventListener("click", () => {
     addDialog.showModal();
   });
 
@@ -34,6 +37,7 @@ const fetchFighterTemplate = async () => {
 
 const fighterToTemplate = async (fighter) => {
   let template = (await fetchFighterTemplate())
+    .replaceAll("${number}", getFighterNumber(fighter))
     .replace("${name}", fighter.name)
     .replace("${description}", fighter.description)
     .replace("${image}", fighter.image);
@@ -42,6 +46,10 @@ const fighterToTemplate = async (fighter) => {
   });
   return template;
 };
+
+const getFighterNumber = (fighter) => {
+    return fighter.stats.find((stat) => (stat.label = "fighter_number")).value;
+}
 
 const fighters = [
   {

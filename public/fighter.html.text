@@ -1,19 +1,18 @@
-<div class="fighter">
-  <img
-    src="${image}"
-  />
+<div class="fighter" id="fighter_${number}">
+  <img src="${image}" />
   <span class="title">${name}</span>
   <div class="actions">
-    <a style="color: red" class="remove_action"
+    <a
+      style="color: red"
+      class="remove_action"
+      fighter_number="${number}"
       ><i class="fa-solid fa-trash"></i
     ></a>
     <a style="color: blue" class="edit_action"
       ><i class="fa-solid fa-pen-to-square"></i
     ></a>
   </div>
-  <p>
-    ${description}
-  </p>
+  <p>${description}</p>
   <ul class="stats">
     <li><span class="label">Fighter Number:</span> ${fighter_number}</li>
     <li><span class="label">Unlock Order:</span> ${unlock_order}</li>
