@@ -30,9 +30,11 @@ const setup = () => {
     });
   });
 
-  document.querySelector(".edit_action").addEventListener("click", () => {
-    addDialog.showModal();
-  });
+  document.querySelectorAll(".edit_action").forEach((el) => {
+    el.addEventListener("click", () => {
+      addDialog.showModal();
+    });
+  })
 
   document.getElementById("addButton").addEventListener("click", () => {
     addDialog.showModal();
@@ -47,9 +49,6 @@ const fetchFighterTemplate = async () => {
   return html;
 };
 
-// const fighter = await fetchFighterTemplate();
-
-// fightersContainer.innerHTML += fighter;
 
 const fighterToTemplate = async (fighter) => {
   let template = (await fetchFighterTemplate())
@@ -79,3 +78,7 @@ const loadData = async () => {
 };
 
 loadData();
+
+
+//TODO:
+// Add Edit and Add
