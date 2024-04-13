@@ -8,7 +8,14 @@
   </head>
   <body>
     <!-- <div id="app"></div> -->
-    <dialog open>
+    <dialog>
+      <form method="dialog">
+        <p>Are you sure you want to delete this fighter?</p>
+        <input type="button" value="Yes" class="danger_action" />
+        <input type="button" value="No" />
+      </form>
+    </dialog>
+    <dialog>
       <form method="dialog">
         <p>Add a fighter!</p>
         <input type="text" name="Image" placeholder="Image" />

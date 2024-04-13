@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 dialog {
-  width:80%;
+  width: 80%;
 }
 
 form {
@@ -38,6 +38,10 @@ form {
   flex-direction: column;
   gap: 8px;
   width: 100%;
+}
+
+.danger_action {
+  background-color: red;
 }
 
 form input {
@@ -136,7 +140,7 @@ body,
   border: 1px solid black;
   padding: 16px;
   background-color: #888888;
-  flex-basis: calc(31.000% - 14px); /* Adjust for gap and padding */
+  flex-basis: calc(31% - 14px); /* Adjust for gap and padding */
   overflow: hidden;
 }
 .fighter .stats {
